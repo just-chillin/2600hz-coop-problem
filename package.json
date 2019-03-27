@@ -1,0 +1,16 @@
+{
+  "name": "2600hz-coop-problem",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "node-fetch": "^2.3.0"
+  }
+}

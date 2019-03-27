@@ -1,0 +1,65 @@
+{
+	"info": {
+		"_postman_id": "9bcf0d5d-ed39-491d-bd16-4d8c758787e2",
+		"name": "jira-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Multiple triggers",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"action\":\"call_event\",\r\n\t\"name\":\"call_handled\",\r\n\t\"data\":{\r\n\t\t\"event_timestamp\":{{$timestamp}},\r\n\t\t\"queue_enter_time\":{{$timestamp}},\r\n\t\t\"caller_id_num\":\"440-503-1772\",\r\n\t\t\"caller_id_name\":\"caller1\",\r\n\t\t\"queue_name\":\"hello\",\r\n\t\t\"queue_id\":\"queueid-1\",\r\n\t\t\"session_id\":\"session1\",\r\n\t\t\"event_name\":\"call_handled\",\r\n\t\t\"recipient_id\":\"recipient1\",\r\n\t\t\"recipient_name\":\"jake\",\r\n\t\t\"total_wait_time\":5000\r\n\t}\r\n}"
+				},
+				"url": {
+					"raw": "localhost:3000",
+					"host": [
+						"localhost"
+					],
+					"port": "3000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Total_wait_time is greater than threshold",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "secret",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "colin",
+				"type": "string"
+			}
+		]
+	}
+}
