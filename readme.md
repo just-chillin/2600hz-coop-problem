@@ -35,8 +35,7 @@ Configuration for thresholds used to trigger issue creation based on:
 	Time the caller spent waiting in queue "total_wait_time"
 	Specific queue that the caller came through "queue_name"
 	Specific caller "caller_id_name"
-	Who handled the call "recipient_id" (Does it need to meet all this criteria? Or just one.)
-
+	Who handled the call "recipient_id"
 Once issue creation is triggered, the service uses Jira REST API to create a JIRA Issue.
 	The issue summary should contain information about the caller (such as caller id information) for easy identification
 	Issue description should contain information about why the issue is being created, as well as queue and recipient information
